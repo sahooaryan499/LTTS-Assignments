@@ -17,5 +17,5 @@ int main(){
     b1.vol = len * bread * hgt;
     b1.tsa = (2*len*bread) + (2*len*hgt) + (2*bread*hgt);
     printf("Volume:%f and Total Surface Area:%f",b1.vol,b1.tsa);
-    printf("\nIn pointer formart    Volume:%f and Total Surface Area:%f",ptr->vol,ptr->tsa);
+    printf("\nIn pointer formart,Volume:%f and Total Surface Area:%f",ptr->vol,ptr->tsa);
 }
