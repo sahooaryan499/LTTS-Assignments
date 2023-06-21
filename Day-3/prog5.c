@@ -30,34 +30,38 @@ int largest_digit(int num) {
     return largest;
 }
 
+int count_digits(int num) {
+    int count = 0;
+
+    while (num > 0) {
+        num /= 10;
+        count++;
+    }
+
+    return count;
+}
+
 int main() {
     int n;
     printf("Enter the total number of elements: ");
     scanf("%d", &n);
 
-    int num, smallest, largest;
+    int num;
     printf("Enter %d numbers: \n", n);
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &num);
-        int currSmallest = smallest_digit(num);
-        int currLargest = largest_digit(num);
 
-        if (i == 0) {
-            smallest = currSmallest;
-            largest = currLargest;
+        if (count_digits(num) == 1) {
+            printf("Not Valid\n");
         } else {
-            if (currSmallest < smallest) {
-                smallest = currSmallest;
-            }
-            if (currLargest > largest) {
-                largest = currLargest;
-            }
+            int currSmallest = smallest_digit(num);
+            int currLargest = largest_digit(num);
+
+            printf("Smallest digit: %d\n", currSmallest);
+            printf("Largest digit: %d\n", currLargest);
         }
     }
-
-    printf("Smallest digit: %d\n", smallest);
-    printf("Largest digit: %d\n", largest);
 
     return 0;
 }
