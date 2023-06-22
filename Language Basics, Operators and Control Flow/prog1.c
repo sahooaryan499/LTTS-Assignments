@@ -11,7 +11,7 @@ int conditionals(int x,int y){
     else{
         printf("%d is greater(using conditionals)\n",y);
     }
-    x>y?printf("%d  is greater(using ternary)\n",x):printf("%d is  greater(using ternary)\n",y);
+    x>y?printf("%d is greater(using ternary)\n",x):printf("%d is greater(using ternary)\n",y);
 }
 
 int main(){
